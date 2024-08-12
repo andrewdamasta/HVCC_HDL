@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module andrewdamasta (
+module tt_um_andrewdamasta (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -23,11 +23,12 @@ module andrewdamasta (
   //assign uio_out = 0;
   assign uio_oe  = 0;
 
-  reg [3:0] a;
-  assign a = ui_in[7:4];
+  reg [7:0] a;
+  assign a = {4'b0000 ,ui_in[7:4];}
 
-  reg [3:0] b;
-  assign b = ui_in[3:0];
+  reg [7:0] b;
+  assign b = {4'b0000, ui_in[3:0];}
+
 
   reg [2:0] AluOp;
   assign AluOp =uio_in[2:0];
@@ -46,6 +47,7 @@ module andrewdamasta (
       3'b101 :  result <= b/a;
       3'b110 :  result <= a&b;
       3'b111 :  result <= a|b;
+    
 
     endcase
   end

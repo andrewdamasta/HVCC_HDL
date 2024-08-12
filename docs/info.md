@@ -8,8 +8,18 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
+Takes 2 four bit words and performs a desired operation on them.
 
-Explain how your project works
+Control uio for the operation to be perfromed 
+0=addition
+1=subtraction
+2=subtraction
+3=multiplication
+4=division
+5=division 
+6=bitwise and 
+7=bitwise or 
+
 
 ## How to test
 

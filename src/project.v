@@ -22,12 +22,13 @@ module tt_um_andrewdamasta (
   //assign uo_out[7:1] =0;
   //assign uio_out = 0;
   assign uio_oe  = 0;
+  assign uio_out = 0;
 
   reg [7:0] a;
-  assign a = {4'b0000 ,ui_in[7:4];}
+  assign a = {4'b0000 ,ui_in[7:4]};
 
   reg [7:0] b;
-  assign b = {4'b0000, ui_in[3:0];}
+  assign b = {4'b0000, ui_in[3:0]};
 
 //hi
 
@@ -58,6 +59,6 @@ module tt_um_andrewdamasta (
   
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, rst_n, 1'b0};
+  wire _unused = &{ena, rst_n, 1'b0, uio_in[7:3]};
 
 endmodule

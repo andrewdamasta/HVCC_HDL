@@ -29,6 +29,7 @@ module tt_um_andrewdamasta (
   reg [7:0] b;
   assign b = {4'b0000, ui_in[3:0];}
 
+//hi
 
   reg [2:0] AluOp;
   assign AluOp =uio_in[2:0];
